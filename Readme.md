@@ -35,12 +35,3 @@ Manage your profile and account settings with ease.
 - **Database**: MongoDB
 - **Other Tools**: Git, GitHub, Vite
 
-## 📦 Installation
-
-Clone the repository and install dependencies.
-
-```bash
-git clone https://github.com/your-username/shortly.git
-cd shortly
-npm install
-```
