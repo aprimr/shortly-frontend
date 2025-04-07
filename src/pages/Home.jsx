@@ -42,7 +42,7 @@ const HomePage = () => {
     const options = {
       protocols: ["http", "https"],
       require_tld: true,
-      require_protocol: false,
+      require_protocol: true,
       require_host: true,
       require_port: false,
       require_valid_protocol: true,
@@ -95,7 +95,8 @@ const HomePage = () => {
   };
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(shortenedUrl);
+    const shortUrl = `${import.meta.env.VITE_FRONTEND_URL}/${shortId}`;
+    navigator.clipboard.writeText(shortUrl);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };

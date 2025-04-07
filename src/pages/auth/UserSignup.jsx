@@ -142,10 +142,6 @@ const UserSignup = () => {
                   "Sign Up"
                 )}
               </button>
-
-              <p className="text-gray-500 text-[9px] md:text-[12px] mt-1 max-w-md">
-                A random username will be assigned to your account.
-              </p>
             </form>
 
             <p className="text-center text-gray-400 mt-3">
@@ -162,7 +158,7 @@ const UserSignup = () => {
           <p className="absolute bottom-1 mx-4 text-left text-gray-300 text-[9px] md:text-[11px] mt-6 max-w-md">
             By Signing up, you agree to our
             <span
-              onClick={() => navigate("/terms")}
+              onClick={() => navigate("/terms-and-privacy")}
               className="text-emerald-400 hover:underline cursor-pointer"
             >
               {" "}
@@ -170,7 +166,7 @@ const UserSignup = () => {
             </span>{" "}
             &
             <span
-              onClick={() => navigate("/privacy-policy")}
+              onClick={() => navigate("/terms-and-privacy")}
               className="text-emerald-400 hover:underline cursor-pointer"
             >
               {" "}

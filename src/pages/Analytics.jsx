@@ -20,7 +20,6 @@ export default function AnalyticsPage() {
   const username = user?.username;
 
   const navigate = useNavigate();
-
   const [totalClicks, setTotalClicks] = useState(0);
   const [totalShortened, setTotalShortened] = useState(0);
   const [mostClicked, setMostClicked] = useState(0);
@@ -32,8 +31,9 @@ export default function AnalyticsPage() {
     const fetchUrls = async () => {
       try {
         const res = await axios.get(
-          `${import.meta.env.VITE_BACKEND_URL}/api/v1/urls/get-urls`,
-          { headers: { username } }
+          `${
+            import.meta.env.VITE_BACKEND_URL
+          }/api/v1/urls/get-urls?username=${username}`
         );
 
         if (res.status === 200) {
@@ -61,7 +61,7 @@ export default function AnalyticsPage() {
           setMostClicked(initialClicks);
         }
       } catch (error) {
-        console.log(error);
+        console.log(error.response.data.message);
       } finally {
         setLoading(false);
       }
